@@ -1,6 +1,10 @@
-#include <spdlog/spdlog.h>
+#include <QApplication>
+#include "mainwindow.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    spdlog::info("Hello world!");
+    QApplication app(argc, argv);
+    MainWindow mainWindow;
+    mainWindow.show();
+    return app.exec();
 }
